@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Product>
+@using Microsoft.Extensions.Options
+@inject IOptions<StripeSettings> Stripe
+
+
+<div>
+    <h2>Shop</h2>
+</div>
+<p>Count: @Model.Count()</p>
+
+@foreach(var p in Model)
+{
+    <li>@p.Title</li>
+
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form action="/Shop/Charge" method="POST">
+            <article class="shop_item">
+                <img class="img" src="~/images/cat.jpg" />
+            </article>
+            <h3>Cat</h3>
+            <label>Amount: $10.00</label>
+            <script src="//checkout.stripe.com/v2/checkout.js"
+                    class="stripe-button"
+                    data-key="@Stripe.Value.PublishableKey"
+                    data-locale="auto"
+                    data-description="Sample Charge"
+                    data-amount="500">
+            </script>
+
+
+
+        </form>
+    </div>
+
+    <div class="col-md-4">
+        <form action="/Shop/Charge" method="POST">
+            <article class="shop_item">
+                <img class="img" src="~/images/smallcat.jpeg" />
+            </article>
+            <h3>Small Cat</h3>
+            <label>Amount: $20.00</label>
+            <script src="//checkout.stripe.com/v2/checkout.js"
+                    class="stripe-button"
+                    data-key="@Stripe.Value.PublishableKey"
+                    data-locale="auto"
+                    data-description="Sample Charge"
+                    data-amount="500">
+            </script>
+
+
+
+        </form>
+    </div>
+    <div class="col-md-4">
+        <form action="/Shop/Charge" method="POST">
+            <article class="shop_item">
+                <img class="img" src="~/images/whitecat.jpeg" />
+            </article>
+            <h3>White Cat</h3>
+            <label>Amount: $5.00</label>
+
+            <script src="//checkout.stripe.com/v2/checkout.js"
+                    class="stripe-button"
+                    data-key="@Stripe.Value.PublishableKey"
+                    data-locale="auto"
+                    data-description="Sample Charge"
+                    data-amount="500">
+            </script>
+
+        </form>
+    </div>
+
+
+
+</div>

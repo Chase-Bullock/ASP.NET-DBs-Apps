@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/banner3.svg" style="height: 288px; width: 712px;" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Create a To-do list, however big or small.
+                    <a class="btn btn-primary" href="/Todo">
+                        Try it now
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    @*<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>*@
+</div>
+
+<div class="row">
+    <div class="col-md-3" >
+        <h2 style="text-align:center;">Completed Projects<i class="fa fa-check"></i></h2>
+        <div class="card" style="width:25rem;">
+            <img src="~/images/ben-chang11.jpg" style="height:87px; width:249px;" alt="Img" />
+            <div class="card-block">
+                <h4 class="card-title">To-do List</h4>
+                <p class="card-text">A simple list creation app for logged in users</p>
+                <a href="/todo" class="btn btn-primary"><i class="fa fa-list-ul"></i>Sort Yourself!</a>
+            </div>
+        </div>
+        <div class="card" style="width:25rem;">
+            <div class="btn-group">
+                <i class="fa fa-address-card fa-4x fa-fw"></i>
+                <i class="fa fa-address-card-o fa-5x"></i>
+                <i class="fa fa-address-card fa-4x fa-fw"></i>
+            </div>
+            <div class="card-block">
+                <h4 class="card-title">Users and Admins</h4>
+                <p class="card-text">A working role based authorization and users system, you can also <a href="/Account/Login">log in with Facebook!</a></p>
+                <a href="/Account/Login" class="btn btn-primary">Log In!</a>
+            </div>
+        </div>
+
+        </div>
+    <div class="col-md-3">
+        <h2>Future Projects<i class="fa fa-paper-plane"></i></h2>
+        <ul>
+            <li>Add a music library</li>
+            <li>Create a better layout</li>
+            <li>Add a fully functioning shop</li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Overview</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Run &amp; Deploy</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
+        </ul>
+    </div>
+</div>
